@@ -37,6 +37,10 @@ class _HomePageState extends State<HomePage> {
             ));
   }
 
+  void goToWorkoutPage(String workoutName){
+    Navigator.push(context, MaterialPageRoute(builder: (context) => WorkoutPage()))
+  }
+
   //save workout
   void save() {
     //get workout from text controller
@@ -53,7 +57,7 @@ class _HomePageState extends State<HomePage> {
     //pop dialgo box
     Navigator.pop(context);
     clear();
-  } 
+  }
 
   //clear controller
   void clear() {
@@ -71,6 +75,10 @@ class _HomePageState extends State<HomePage> {
             itemCount: value.getWorkoutList().length,
             itemBuilder: (context, index) => ListTile(
                   title: Text(value.getWorkoutList()[index].name),
+                  trailing: IconButton(
+                    icon: const Icon(Icons.arrow_forward_ios),
+                    onPressed: goToWorkoutPage,
+                  ),
                 )),
         floatingActionButton: FloatingActionButton(
             onPressed: createNewWorkout, child: const Icon(Icons.add)),
