@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../data/workout_data.dart';
 
 class WorkoutPage extends StatefulWidget {
   final String workoutName;
@@ -11,10 +13,17 @@ class WorkoutPage extends StatefulWidget {
 class _WorkoutPageState extends State<WorkoutPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Consumer<WorkoutData>(
+      builder: (context, value, child) => Scaffold(
       appBar: AppBar(
         title: Text(widget.workoutName),
       ),
+      body: ListView.builder(
+        itemCount: value.numberOfExercisesInWorkout(widget.workoutName),
+        itemBuilder: (context, index) => 
+      ListTile()
+      ),
+    ),
     );
   }
 }
