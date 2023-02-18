@@ -48,7 +48,7 @@ class WorkoutData extends ChangeNotifier {
     notifyListeners();
   }
 
-  //return relevant workout objecg given relevant workout name
+  //return relevant workout object given relevant workout name
   Workout getRelevantWorkout(String workoutName) {
     Workout relevantWorkout =
         workoutList.firstWhere((workout) => workout.name == workoutName);
