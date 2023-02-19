@@ -22,7 +22,7 @@ class _WorkoutPageState extends State<WorkoutPage> {
         itemCount: value.getLengthOfWorkout(widget.workoutName),
         itemBuilder: (context, index) => 
       ListTile(
-        title: ,
+        title: Text('title'),
       )
       ),
     ),
