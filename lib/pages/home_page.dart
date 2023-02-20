@@ -77,14 +77,21 @@ class _HomePageState extends State<HomePage> {
         ),
         body: ListView.builder(
             itemCount: value.getWorkoutList().length,
-            itemBuilder: (context, index) => ListTile(
-                  title: Text(value.getWorkoutList()[index].name),
-                  trailing: IconButton(
-                    icon: const Icon(Icons.arrow_forward_ios),
-                    onPressed: () => 
-                    goToWorkoutPage(value.getWorkoutList()[index].name),
+            itemBuilder: (context, index) => Container(
+              margin: EdgeInsets.all(10.0),
+              decoration: BoxDecoration(
+                color: Colors.amberAccent,
+                borderRadius: BorderRadius.all(Radius.circular(5.0))
+              ),
+              child: ListTile(
+                    title: Text(value.getWorkoutList()[index].name),
+                    trailing: IconButton(
+                      icon: const Icon(Icons.arrow_forward_ios),
+                      onPressed: () => 
+                      goToWorkoutPage(value.getWorkoutList()[index].name),
+                    ),
                   ),
-                )),
+            )),
         floatingActionButton: FloatingActionButton(
             onPressed: createNewWorkout, child: const Icon(Icons.add)),
       ),
