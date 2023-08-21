@@ -78,8 +78,8 @@ class _HomePageState extends State<HomePage> {
         body: ListView.builder(
             itemCount: value.getWorkoutList().length,
             itemBuilder: (context, index) => Container(
-              margin: EdgeInsets.all(10.0),
-              decoration: BoxDecoration(
+              margin: const EdgeInsets.all(10.0),
+              decoration: const BoxDecoration(
                 color: Colors.amberAccent,
                 borderRadius: BorderRadius.all(Radius.circular(5.0))
               ),

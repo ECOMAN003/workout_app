@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:workout_app/data/workout_data.dart';
-
 import 'pages/home_page.dart';
 
 void main() {

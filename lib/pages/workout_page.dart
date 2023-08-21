@@ -21,7 +21,7 @@ class _WorkoutPageState extends State<WorkoutPage> {
       body: ListView.builder(
         itemCount: value.getLengthOfWorkout(widget.workoutName),
         itemBuilder: (context, index) => 
-      ListTile(
+      const ListTile(
         title: Text('title'),
       )
       ),
